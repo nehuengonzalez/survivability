@@ -53,7 +53,7 @@ def sca_lp(graph, scenarios, demands, inst_s='s', e_avoid='avoid'
 
     # Pre-procesamiento
     kp = compute_kp(graph, scenarios, demands)
-    ks = compute_ks(graph, demands)
+    ks = compute_ks(scenarios, demands)
     sp = compute_sp(scenarios, demands, inst_s)
     sources, destinations = compute_sides(graph, demands)
 
