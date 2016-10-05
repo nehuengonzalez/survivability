@@ -118,10 +118,10 @@ def compute_sp(scenarios, demands, inst_s):
     for g, g_list in enumerate(scenarios):
         sg = inst_s[:]
         for k, dem in enumerate(demands):
-            for p_id, p in enumerate(dem[1]):
+            #for p_id, p in enumerate(dem[1]):
                 for e_id in g_list:
-                    if e_id in p:
-                        for e_id in p:
+                    if e_id in dem[1][0]:
+                        for e_id in dem[1][0]:
                             sg[e_id] += dem[0]
         sp.append(sg)
     return sp
